@@ -145,28 +145,80 @@ The following are a list of known EVM compatible chains that you can from HPB to
 	    network_id: 137,
 	    skipDryRun: true
 	  },  
+	  
+	  // Fantom
+	 fantom: {
+    	    provider: () => new HDWalletProvider(
+    	       privateKeys,
+    	       'wss://wsapi.fantom.network/'
+    	    ),
+	    network_id: 250,
+	    skipDryRun: true
+	  },  
+	  
+	  // Fantom
+	 fantom: {
+    	    provider: () => new HDWalletProvider(
+    	       privateKeys,
+    	       'wss://wsapi.fantom.network/'
+    	    ),
+	    network_id: 250,
+	    skipDryRun: true
+	  },  
 	
+	 // Thundercore
+	 fantom: {
+    	    provider: () => new HDWalletProvider(
+    	       privateKeys,
+    	       'wss://mainnet-ws.thundercore.com'
+    	    ),
+	    network_id: 108,
+	    skipDryRun: true
+	  },  
+	  
+	  // Tomochain
+	 fantom: {
+    	    provider: () => new HDWalletProvider(
+    	       privateKeys,
+    	       'wss://ws.testnet.tomochain.com'
+    	    ),
+	    network_id: 88,
+	    skipDryRun: true
+	  },  
+	  
+	  // POA
+	 fantom: {
+    	    provider: () => new HDWalletProvider(
+    	       privateKeys,
+    	       'wss://core.poa.network/wss'
+    	    ),
+	    network_id: 99,
+	    skipDryRun: true
+	  },  
+	  
+	  // POA
+	 fantom: {
+    	    provider: () => new HDWalletProvider(
+    	       privateKeys,
+    	       'wss://core.poa.network/wss'
+    	    ),
+	    network_id: 99,
+	    skipDryRun: true
+	  },  
+	  
+	  // Harmony
+	 fantom: {
+    	    provider: () => new HDWalletProvider(
+    	       privateKeys,
+    	       'wss://ws.s0.t.hmny.io'
+    	    ),
+	    network_id: 1666600000,
+	    skipDryRun: true
+	  }  
+	  
 
-	 
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+//,	 
+
     
   },
 
