@@ -28,14 +28,41 @@ You'll of course need an EVM wallet to transfer tokens to and from. Note that EV
 
 You will also need a wallet private key. This, along with the actual transaction message, is combined and hashed and is therefore fully secure on both chains, however we use the private key as part of the scripts for testing this cross chain bridge, therefore we STRONGLY ADVISE that you let truffle generate some new wallets for you, along with a private key for the wallets. You can use this for testing, and if you accidentally expose your private key, it won't matter because the wallet is just being used for testing.
 
-A high level overview of the process is as follows:
+A high level overview of the test process is as follows:
 
 1. We deploy the necessary smart contracts to both blockchains
 2. We call the smart contracts using a script to mint some tokens (1000 'HTK' and 500 'BTK')
 3. We verify the balance of both of the wallets to confirm the tokens were minted
 4. We launch the hpb-bsc-bridge.js Bridge API script to act as the "forwarder" from the HPB network to the BSC Test network (uses web sockets)
-5. We run the hpb-bsc-transfer.js script to call the HPB smart contract and initate the transfer.
-6. We once again verify the balance of both of the wallets
+5. We run the hpb-bsc-transfer.js script to call the HPB smart contract and initate the transfer of 33 tokens.
+6. We once again verify the balance of both of the wallets to see if HPB wallet now holds 967 tokens and BSC Test wallet holds 533 tokens.
+7. We now launch the bsc-hpb-bridge.js Bridge API script to act as the "forwarder" from the BSC Test network to the HPB network.
+8. We run the bsc-hpb-transfer.js script to call the BSC smart contract and initate the transfer of 5 tokens.
+9. We once again verify the balance of both of the wallets to see if HPB wallet now holds 972 tokens and BSC Test wallet holds 528 tokens.
+
+
+Getting started - 
+You'll need node installed on your PC
+https://nodejs.org/en/download/
+
+Once node is installed, I also recommend you install git (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) although you can still run the tests without it.
+
+Ensure both truffle and HDWallet are installed:
+npm install -g truffle
+npm install @truffle/hdwallet-provider
+
+(If it doesn't work, check node installed correctly. Might need a reboot)
+
+Once everything is installed, download a copy of this git repo, and place it all in a suitable folder (e.g. /hpb-bridge/)
+
+Firstly, lets create some EVM wallets so that we can test the bridge, and not risk our own private wallets.
+
+go into the folder you created with all the files from the git, and use the following:
+
+
+
+
+
 
 
 
