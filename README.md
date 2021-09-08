@@ -31,8 +31,11 @@ You will also need a wallet private key. This, along with the actual transaction
 A high level overview of the process is as follows:
 
 1. We deploy the necessary smart contracts to both blockchains
-2. We call the smart contracts using a script to mint some tokens 
+2. We call the smart contracts using a script to mint some tokens (1000 'HTK' and 500 'BTK')
 3. We verify the balance of both of the wallets to confirm the tokens were minted
+4. We launch the hpb-bsc-bridge.js Bridge API script to act as the "forwarder" from the HPB network to the BSC Test network (uses web sockets)
+5. We run the hpb-bsc-transfer.js script to call the HPB smart contract and initate the transfer.
+6. We once again verify the balance of both of the wallets
 
 
 
