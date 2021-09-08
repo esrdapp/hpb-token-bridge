@@ -20,6 +20,6 @@ module.exports = async done => {
     message, 
     privKey
   ); 
-  await bridgeEth.burn(accounts[0], amount, nonce, signature);
+  await bridgeHpb.burn(accounts[0], amount, nonce, signature);
   done();
 }
