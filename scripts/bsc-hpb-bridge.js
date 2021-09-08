@@ -2,9 +2,14 @@ const Web3 = require('web3');
 const BridgeHpb = require('../build/contracts/BridgeHpb.json');
 const BridgeBsc = require('../build/contracts/BridgeBsc.json');
 
-// define web sockets
-const web3Hpb = new Web3('ws://ws.hpbnode.com');
-const web3Bsc = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545');
+// define connections
+
+//BSC Testnet web socket address
+const web3Bsc = new Web3('wss://testnet-dex.binance.org/api/ws');
+
+// HPB Node address
+const web3Hpb = new Web3('https://hpbnode.com');
+
 
 const adminPrivKey = 'add your private key here, eg 0xABCDEF....';
 
