@@ -10,7 +10,7 @@ It achieves this by using an API bridge and web sockets to listen out for transa
 HPB Netowrk web socket address: ws://ws.hpbnode.com
 HPB Network explorer: https://hpbscan.org
 
-BSC Test net web socket address: https://data-seed-prebsc-1-s1.binance.org:8545
+BSC Test net web socket address: wss://testnet-dex.binance.org/api/ws
 BSC Testnet explorer: https://testnet-explorer.binance.org/
 
 HPB is a Layer 1, fully EVM-compatible blockchain, only with much faster transactional speeds than Ethereum (5000tps vs 25tps) and much lower gas fees ($0.01 vs $50)
