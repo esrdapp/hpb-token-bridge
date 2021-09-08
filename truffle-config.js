@@ -65,7 +65,7 @@ module.exports = {
     // }
 	  
 /* 
-HPB Websockets connection
+HPB Node connection
 */	  
   
 	  
@@ -73,7 +73,7 @@ HPB Websockets connection
 	  	hpb: {
     	    provider: () => new HDWalletProvider(
     	       privateKeys,
-    	       'wss://ws.hpbnode.com'
+    	       'https://hpbnode.com'
     	    ),
 	    network_id: 269,
 	    skipDryRun: true
@@ -81,31 +81,11 @@ HPB Websockets connection
 	  
 	  
 /* 
-The following are a list of known EVM compatible chains that you can from HPB to.
+The following are a list of well-known EVM compatible chains that you can bridge from HPB to. You can of course add more if you want to
 */
 
 	  
   
-	  // Ethereum Main Net (not recommended because of gas fees!)
-	  eth: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'ETH_NODE_URL'
-    	    ),
-	    network_id: 1,
-	    skipDryRun: true
-	  },
-	
-	 // Ethereum Test Net 
-	ethTestNet: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'ETH_NODE_URL'
-    	    ),
-	    network_id: 5,
-	    skipDryRun: true
-	  },  
-	  
 	  // Binance Smart Chain (BSC)
 	bsc: {
     	    provider: () => new HDWalletProvider(
@@ -213,6 +193,26 @@ The following are a list of known EVM compatible chains that you can from HPB to
     	       'wss://ws.s0.t.hmny.io'
     	    ),
 	    network_id: 1666600000,
+	    skipDryRun: true
+	  },
+	  
+	  // Ethereum Main Net (not recommended because of gas fees!)
+	  eth: {
+    	    provider: () => new HDWalletProvider(
+    	       privateKeys,
+    	       'ETH_NODE_URL'
+    	    ),
+	    network_id: 1,
+	    skipDryRun: true
+	  },
+	
+	 // Ethereum Test Net 
+	ethTestNet: {
+    	    provider: () => new HDWalletProvider(
+    	       privateKeys,
+    	       'ETH_NODE_URL'
+    	    ),
+	    network_id: 5,
 	    skipDryRun: true
 	  }  
 	  
