@@ -5,7 +5,7 @@ The github code is to swap some dummy HPB HRC20 tokens "HTK", across to the Bina
 
 (see hbb-bsc-bridge.js and bsc-hpb-bridge.js for more details) 
 
-It achieves this by using an API bridge and web sockets:
+It achieves this by using an API bridge and web sockets to listen out for transactional events on one chain, and act as a "forwarder" to create the same mount of tokens on the other chain.
 
 HPB Netowrk web socket address: ws://ws.hpbnode.com
 BSC Test net web socket address: https://data-seed-prebsc-1-s1.binance.org:8545
@@ -85,7 +85,24 @@ Next you'll need a small amount of HPB in your test wallet account and a small a
 
 Either purchase some, request some from the community, use a faucet. etc. For the purposes of the demo, 1 HPB and 1 BNB is more than enough.
 
-Once you have the HPB and BNB in both wallets, you're ready to deploy the smart contracts.
+Once you have the HPB and BNB in both wallets, you can add your wallet private key into the following files:
+
+scripts/hpb-bsc-bridge.js (Line 9)
+scripts/bsc-hpb-bridge.js (Line 9)
+scripts/hpb-bsc-transfer.js (Line 3)
+scripts/bsc-hpb-transfer.js (Line 3)
+
+The scripts are used to interact with them once deployed.
+
+We're now ready to deploy the smart contracts to both chains.
+
+If you are currently in the truffle develope console ( truffle(develop> ) then exit out of it by using the command ".exit" (notice the dot at the front!)
+
+First we'll deploy the HPB smart contracts...
+
+type the following:
+
+truffle migrate --network hpb
 
 
 
