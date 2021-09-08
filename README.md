@@ -107,7 +107,34 @@ type the following:
 
 truffle migrate --network hpb
 
+once completed, we do the exact same thing on the BSC Test net:
 
+truffle migrate --network bscTestnet
+
+Both sets of contracts should now be running on the two chains. We can verify how many tokens were created on both chains by running the following:
+
+truffle exec scripts/hpb-token-balance.js --network hpb
+truffle exec scripts/bsc-token-balance.js --network bscTestnet
+
+Now let's setup our bridge to transfer from HPB to BSC Testnet. Open up another command prompt window, and navigate to the same folder.
+
+Run the following script to activate the bridge:
+
+node scripts/hpb-bsc-bridge.js
+
+With the listener now activated, now switch back to your first terminal and run the following script:
+
+truffle exec scripts/hpb-bsc-transfer.js --network hpb
+
+If it works, you'll see a confirmation in the window where the bridge API script is running. You can now verify both accounts with the token blance scripts.
+
+If you want to transfer in the opposite direction, you simply run the bsc to hpb bridge in a separate window:
+
+node scripts/bsc-hpb-bridge.js
+
+and then initiate the token transfer script:
+
+truffle exec scripts/bsc-hpb-transfer.js --network bscTestnet
 
 
 
