@@ -1,19 +1,17 @@
 const Web3 = require('web3');
-const BridgeEth = require('../build/contracts/BridgeEth.json');
+const BridgeHpb = require('../build/contracts/BridgeHpb.json');
 const BridgeBsc = require('../build/contracts/BridgeBsc.json');
 
-
-
-
-
-
-
-const web3Eth = new Web3('ws://ws.hpbnode.com');
+// define web sockets
+const web3Hpb = new Web3('ws://ws.hpbnode.com');
 const web3Bsc = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545');
-const adminPrivKey = '0ad7236eafdd7b274b933a460ac66e350cb84d4b4c7c57c7528682580f757a79';
+
+const adminPrivKey = 'add your private key here, eg 0xABCDEF....';
+
+// forwarder to BSC network
 const { address: admin } = web3Bsc.eth.accounts.wallet.add(adminPrivKey);
 
-const bridgeEth = new web3Eth.eth.Contract(
+const bridgeHpb = new web3Hpb.eth.Contract(
   BridgeEth.abi,
   BridgeEth.networks['269'].address
 );
