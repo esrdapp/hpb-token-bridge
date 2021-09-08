@@ -12,8 +12,8 @@ const adminPrivKey = 'add your private key here, eg 0xABCDEF....';
 const { address: admin } = web3Bsc.eth.accounts.wallet.add(adminPrivKey);
 
 const bridgeHpb = new web3Hpb.eth.Contract(
-  BridgeEth.abi,
-  BridgeEth.networks['269'].address
+  BridgeHpb.abi,
+  BridgeHpb.networks['269'].address
 );
 
 const bridgeBsc = new web3Bsc.eth.Contract(
@@ -21,7 +21,7 @@ const bridgeBsc = new web3Bsc.eth.Contract(
   BridgeBsc.networks['97'].address
 );
 
-bridgeEth.events.Transfer(
+bridgeHpb.events.Transfer(
   {fromBlock: 0, step: 0}
 )
 .on('data', async event => {
