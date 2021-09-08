@@ -110,7 +110,7 @@ The following are a list of well-known EVM compatible chains that you can bridge
 	 xdai: {
     	    provider: () => new HDWalletProvider(
     	       privateKeys,
-    	       'wss://rpc.xdaichain.com/wss'
+    	       'https://rpc.xdaichain.com/'
     	    ),
 	    network_id: 100,
 	    skipDryRun: true
@@ -120,77 +120,57 @@ The following are a list of well-known EVM compatible chains that you can bridge
 	 matic: {
     	    provider: () => new HDWalletProvider(
     	       privateKeys,
-    	       'wss://rpc-mainnet.matic.network'
+    	       'https://rpc-mainnet.maticvigil.com/'
     	    ),
 	    network_id: 137,
 	    skipDryRun: true
 	  },  
-	  
+	  	  
 	  // Fantom
 	 fantom: {
     	    provider: () => new HDWalletProvider(
     	       privateKeys,
-    	       'wss://wsapi.fantom.network/'
-    	    ),
-	    network_id: 250,
-	    skipDryRun: true
-	  },  
-	  
-	  // Fantom
-	 fantom: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'wss://wsapi.fantom.network/'
+    	       'https://rpc.ftm.tools/'
     	    ),
 	    network_id: 250,
 	    skipDryRun: true
 	  },  
 	
 	 // Thundercore
-	 fantom: {
+	 thundercore: {
     	    provider: () => new HDWalletProvider(
     	       privateKeys,
-    	       'wss://mainnet-ws.thundercore.com'
+    	       'https://mainnet-rpc.thundercore.com'
     	    ),
 	    network_id: 108,
 	    skipDryRun: true
 	  },  
 	  
 	  // Tomochain
-	 fantom: {
+	 tomochain: {
     	    provider: () => new HDWalletProvider(
     	       privateKeys,
-    	       'wss://ws.testnet.tomochain.com'
+    	       'https://rpc.tomochain.com'
     	    ),
 	    network_id: 88,
 	    skipDryRun: true
 	  },  
-	  
+	    
 	  // POA
-	 fantom: {
+	 poa: {
     	    provider: () => new HDWalletProvider(
     	       privateKeys,
-    	       'wss://core.poa.network/wss'
-    	    ),
-	    network_id: 99,
-	    skipDryRun: true
-	  },  
-	  
-	  // POA
-	 fantom: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'wss://core.poa.network/wss'
+    	       'https://core.poanetwork.dev'
     	    ),
 	    network_id: 99,
 	    skipDryRun: true
 	  },  
 	  
 	  // Harmony
-	 fantom: {
+	 harmony: {
     	    provider: () => new HDWalletProvider(
     	       privateKeys,
-    	       'wss://ws.s0.t.hmny.io'
+    	       'https://api.harmony.one'
     	    ),
 	    network_id: 1666600000,
 	    skipDryRun: true
