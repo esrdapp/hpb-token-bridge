@@ -1,17 +1,10 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const privateKeys = ['0x0ad7236eafdd7b274b933a460ac66e350cb84d4b4c7c57c7528682580f757a79'];
+const privateKeys = ['add your private key here, e.g. 0xABCDEF.............'];
+// const fs = require('fs');
+// const mnemonic = fs.readFileSync(".secret").toString().trim();
 
-/**
- * Use this file to configure your truffle project. It's seeded with some
- * common settings for different networks and features like migrations,
- * compilation and testing. Uncomment the ones you need or modify
- * them to suit your project as necessary.
- *
- * More information about configuration can be found at:
- *
- * trufflesuite.com/docs/advanced/configuration
- *
- * To deploy via Infura you'll need a wallet provider (like @truffle/hdwallet-provider)
+/*
+ * To deploy this via Infura you'll need a wallet provider (like @truffle/hdwallet-provider)
  * to sign your transactions before they're sent to a remote public node. Infura accounts
  * are available for free at: infura.io/register.
  *
@@ -19,15 +12,11 @@ const privateKeys = ['0x0ad7236eafdd7b274b933a460ac66e350cb84d4b4c7c57c752868258
  * public/private key pairs. If you're publishing your code to GitHub make sure you load this
  * phrase from a file you've .gitignored so it doesn't accidentally become public.
  *
- */
+*/
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
-//
-// const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 module.exports = {
-  /**
+/*
    * Networks define how you connect to your ethereum client and let you set the
    * defaults web3 uses to send transactions. If you don't specify one truffle
    * will spin up a development blockchain for you on port 9545 when you
@@ -35,7 +24,7 @@ module.exports = {
    * network from the command line, e.g
    *
    * $ truffle test --network <network-name>
-   */
+*/
 
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
@@ -74,8 +63,31 @@ module.exports = {
     // network_id: 2111,   // This network is yours, in the cloud.
     // production: true    // Treats this network as if it was a public net. (default: false)
     // }
-    
-    	eth: {
+	  
+/* 
+HPB Websockets connection
+*/	  
+  
+	  
+	  //Main HPB provider
+	  	hpb: {
+    	    provider: () => new HDWalletProvider(
+    	       privateKeys,
+    	       'wss://ws.hpbnode.com'
+    	    ),
+	    network_id: 269,
+	    skipDryRun: true
+	  },  
+	  
+	  
+/* 
+The following are a list of known EVM compatible chains that you can from HPB to.
+*/
+
+	  
+  
+	  // Ethereum Main Net (not recommended because of gas fees!)
+	  eth: {
     	    provider: () => new HDWalletProvider(
     	       privateKeys,
     	       'ETH_NODE_URL'
@@ -83,7 +95,8 @@ module.exports = {
 	    network_id: 1,
 	    skipDryRun: true
 	  },
-	  
+	
+	 // Ethereum Test Net 
 	ethTestNet: {
     	    provider: () => new HDWalletProvider(
     	       privateKeys,
@@ -93,6 +106,7 @@ module.exports = {
 	    skipDryRun: true
 	  },  
 	  
+	  // Binance Smart Chain (BSC)
 	bsc: {
     	    provider: () => new HDWalletProvider(
     	       privateKeys,
@@ -102,6 +116,7 @@ module.exports = {
 	    skipDryRun: true
 	  },  
 	  
+	  // Binance Smart Chain Test net
 	 bscTestnet: {
     	    provider: () => new HDWalletProvider(
     	       privateKeys,
@@ -110,18 +125,48 @@ module.exports = {
 	    network_id: 97,
 	    skipDryRun: true
 	  },  
-	
-	hpb: {
+	  
+	  // Xdai
+	 xdai: {
     	    provider: () => new HDWalletProvider(
     	       privateKeys,
-    	       'https://hpbnode.com'
+    	       'wss://rpc.xdaichain.com/wss'
     	    ),
-
-
-	    network_id: 269,
+	    network_id: 100,
 	    skipDryRun: true
-	  }  
+	  },  
+	  
+	  // Polygon (Matic)
+	 matic: {
+    	    provider: () => new HDWalletProvider(
+    	       privateKeys,
+    	       'wss://rpc-mainnet.matic.network'
+    	    ),
+	    network_id: 137,
+	    skipDryRun: true
+	  },  
+	
+
 	 
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
     
   },
 
