@@ -6,200 +6,46 @@ Web Socket Address: wss://ws.hpbnode.com
 Binance Smart Chain (BSC)
 RPC: https://bsc-dataseed.binance.org/
 Network ID: 56
-Web Socket Address: wss://ws.hpbnode.com
+Web Socket Address: wss://dex.binance.org/api/ws
 
-HPB
-RPC: https://hpbnode.com
-Network ID: 269
-Web Socket Address: wss://ws.hpbnode.com
+Binance Smart Chain Test net
+RPC: https://data-seed-prebsc-1-s1.binance.org:8545/
+Network ID: 97
+Web Socket Address: wss://testnet-dex.binance.org/api/ws
 
-HPB
-RPC: https://hpbnode.com
-Network ID: 269
-Web Socket Address: wss://ws.hpbnode.com
+Xdai
+RPC: https://rpc.xdaichain.com/
+Network ID: 100
+Web Socket Address: wss://rpc.xdaichain.com/wss
 
-HPB
-RPC: https://hpbnode.com
-Network ID: 269
-Web Socket Address: wss://ws.hpbnode.com
+Polygon (Matic)
+RPC: https://rpc-mainnet.maticvigil.com/
+Network ID: 137
+Web Socket Address: wss://rpc-mainnet.matic.network
 
-HPB
-RPC: https://hpbnode.com
-Network ID: 269
-Web Socket Address: wss://ws.hpbnode.com
+Fantom
+RPC: https://rpc.ftm.tools/
+Network ID: 250
+Web Socket Address: wss://wsapi.fantom.network/
 
-HPB
-RPC: https://hpbnode.com
-Network ID: 269
-Web Socket Address: wss://ws.hpbnode.com
+Thundercore
+RPC: https://mainnet-rpc.thundercore.com
+Network ID: 108
+Web Socket Address: wss://mainnet-ws.thundercore.com
 
-HPB
-RPC: https://hpbnode.com
-Network ID: 269
-Web Socket Address: wss://ws.hpbnode.com
+Tomochain
+RPC: https://rpc.tomochain.com
+Network ID: 88
+Web Socket Address: wss://ws.testnet.tomochain.com
 
+POA
+RPC: https://core.poanetwork.dev
+Network ID: 99
+Web Socket Address: wss://core.poa.network/wss
 
-
-
-
-
-
-
-
-
-
-
+Harmony
+RPC: https://api.harmony.one
+Network ID: 1666600000
+Web Socket Address: wss://ws.s0.t.hmny.io
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	  
-	  
-/* 
-The following are a list of well-known EVM compatible chains that you can bridge from HPB to. You can of course add more if you want to
-*/
-
-	  
-  
-	  // Binance Smart Chain (BSC)
-	bsc: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'https://bsc-dataseed.binance.org/'
-    	    ),
-	    network_id: 56,
-	    skipDryRun: true
-	  },  
-	  
-	  // Binance Smart Chain Test net
-	 bscTestnet: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'https://data-seed-prebsc-1-s1.binance.org:8545/'
-    	    ),
-	    network_id: 97,
-	    skipDryRun: true
-	  },  
-	  
-	  // Xdai
-	 xdai: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'wss://rpc.xdaichain.com/wss'
-    	    ),
-	    network_id: 100,
-	    skipDryRun: true
-	  },  
-	  
-	  // Polygon (Matic)
-	 matic: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'wss://rpc-mainnet.matic.network'
-    	    ),
-	    network_id: 137,
-	    skipDryRun: true
-	  },  
-	  
-	  // Fantom
-	 fantom: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'wss://wsapi.fantom.network/'
-    	    ),
-	    network_id: 250,
-	    skipDryRun: true
-	  },  
-	  
-	  // Fantom
-	 fantom: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'wss://wsapi.fantom.network/'
-    	    ),
-	    network_id: 250,
-	    skipDryRun: true
-	  },  
-	
-	 // Thundercore
-	 fantom: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'wss://mainnet-ws.thundercore.com'
-    	    ),
-	    network_id: 108,
-	    skipDryRun: true
-	  },  
-	  
-	  // Tomochain
-	 fantom: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'wss://ws.testnet.tomochain.com'
-    	    ),
-	    network_id: 88,
-	    skipDryRun: true
-	  },  
-	  
-	  // POA
-	 fantom: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'wss://core.poa.network/wss'
-    	    ),
-	    network_id: 99,
-	    skipDryRun: true
-	  },  
-	  
-	  // POA
-	 fantom: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'wss://core.poa.network/wss'
-    	    ),
-	    network_id: 99,
-	    skipDryRun: true
-	  },  
-	  
-	  // Harmony
-	 fantom: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'wss://ws.s0.t.hmny.io'
-    	    ),
-	    network_id: 1666600000,
-	    skipDryRun: true
-	  },
-	  
-	  // Ethereum Main Net (not recommended because of gas fees!)
-	  eth: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'ETH_NODE_URL'
-    	    ),
-	    network_id: 1,
-	    skipDryRun: true
-	  },
-	
-	 // Ethereum Test Net 
-	ethTestNet: {
-    	    provider: () => new HDWalletProvider(
-    	       privateKeys,
-    	       'ETH_NODE_URL'
-    	    ),
-	    network_id: 5,
-	    skipDryRun: true
-	  }  
