@@ -47,17 +47,50 @@ https://nodejs.org/en/download/
 
 Once node is installed, I also recommend you install git (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) although you can still run the tests without it.
 
-Ensure both truffle and HDWallet are installed:
-npm install -g truffle
-npm install @truffle/hdwallet-provider
+Once everything is installed, download a copy of this git repo, and place it all in a suitable folder (e.g. /hpb-bridge/)
+
+Open up a command prompt, and check that you can see the package.json file (use 'dir' for windows command prompt, or 'ls -l' for Linux)
+
+If you can see it, then run:
+
+npm install
+
+This will install all of the necessary node modules and dependencies.
 
 (If it doesn't work, check node installed correctly. Might need a reboot)
 
-Once everything is installed, download a copy of this git repo, and place it all in a suitable folder (e.g. /hpb-bridge/)
+Once completed, run:
+npm install -g truffle
+npm install @truffle/hdwallet-provider
 
 Firstly, lets create some EVM wallets so that we can test the bridge, and not risk our own private wallets.
 
-go into the folder you created with all the files from the git, and use the following:
+use the following command:
+
+truffle compile
+
+This will tell truffle to create the necessary json files/artifacts, which should appear as a new "build" folder.
+
+Next we'll create some wallet accounts to test with. The the command:
+
+truffle develop
+
+This will create 10x accounts, and you'll also see the private keys for these accounts and the 12-word mnemonic
+
+We only need the first account (account 0) and it's private key to test, so make a note of both the accout address and the private key.
+
+(Note: you can also import this information into Metamask if you wanted to)
+
+Next you'll need a small amount of HPB in your test wallet account and a small amount of BNB in the BSC test wallet account to cover the gas fees of deploying the smart contracts and actually transferring the tokens from one chain to another. Remember the actuall wallet address is the SAME address for both chains!
+
+Either purchase some, request some from the community, use a faucet. etc. For the purposes of the demo, 1 HPB and 1 BNB is more than enough.
+
+Once you have the HPB and BNB in both wallets, you're ready to deploy the smart contracts.
+
+
+
+
+
 
 
 
