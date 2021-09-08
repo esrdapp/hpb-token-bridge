@@ -9,7 +9,7 @@ module.exports = async function (deployer, network, addresses) {
     await deployer.deploy(TokenHpb);
     const tokenHpb = await TokenHpb.deployed();
     
-    //mint 1000 test tokens
+    //mint 1000 HTK test tokens
     await tokenHpb.mint(addresses[0], 1000);
     await deployer.deploy(BridgeHpb, tokenHpb.address);
     const bridgeHpb = await BridgeHpb.deployed();
@@ -18,6 +18,9 @@ module.exports = async function (deployer, network, addresses) {
   if(network === 'bscTestnet') {
     await deployer.deploy(TokenBsc);
     const tokenBsc = await TokenBsc.deployed();
+    
+    //mint 500 BTK test tokens
+    await tokenBsc.mint(addresses[0], 500);
     await deployer.deploy(BridgeBsc, tokenBsc.address);
     const bridgeBsc = await BridgeBsc.deployed();
     await tokenBsc.updateAdmin(bridgeBsc.address);
