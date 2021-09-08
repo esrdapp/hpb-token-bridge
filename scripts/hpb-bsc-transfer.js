@@ -1,12 +1,15 @@
-const BridgeEth = artifacts.require('./BridgeEth.sol');
+const BridgeHpb = artifacts.require('./BridgeHpb.sol');
 
-const privKey = '0x0ad7236eafdd7b274b933a460ac66e350cb84d4b4c7c57c7528682580f757a79';
+const privKey = 'your private key here, e.g. 0xABCDEF.....';
 
 module.exports = async done => {
   const nonce = 1; //Need to increment this for each new transfer
   const accounts = await web3.eth.getAccounts();
-  const bridgeEth = await BridgeEth.deployed();
-  const amount = 1000;
+  const bridgeHpb = await BridgeHpb.deployed();
+  
+  //amount of tokens to send
+  const amount = 33;
+  
   const message = web3.utils.soliditySha3(
     {t: 'address', v: accounts[0]},
     {t: 'address', v: accounts[0]},
