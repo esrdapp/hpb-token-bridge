@@ -107,10 +107,10 @@ Either purchase some, request some from the community, use a faucet. etc. For th
 Once you have the HPB and BNB in both wallets, you can add your wallet private key into the following files:
 
 
-##### scripts/hpb-bsc-bridge.js (Line 9)
-##### scripts/bsc-hpb-bridge.js (Line 9)
-##### scripts/hpb-bsc-transfer.js (Line 3)
-##### scripts/bsc-hpb-transfer.js (Line 3)
+- scripts/hpb-bsc-bridge.js (Line 9)
+- scripts/bsc-hpb-bridge.js (Line 9)
+- scripts/hpb-bsc-transfer.js (Line 3)
+- scripts/bsc-hpb-transfer.js (Line 3)
 
 
 The scripts are used to interact with them once deployed.
