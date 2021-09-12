@@ -16,6 +16,8 @@ It achieves this by using an API bridge and web sockets to listen out for transa
 
 ## What is HPB ##
 
+![High Performance Blockchain](https://www.hpb.io/static/images/logo/indexIcon2.png)
+
 HPB is a Layer 1, fully EVM-compatible blockchain, only with much faster transactional speeds than Ethereum (5000tps vs 25tps) and much lower gas fees ($0.01 vs $50)
 
 Unlike Ethereum, by using HPB as a "core" layer 1 chain, you can bridge tokens to all of your favourite EVM compatible chains (BSC/Polygon/Fantom/Avalanche/Solana/Tomo, etc), 
